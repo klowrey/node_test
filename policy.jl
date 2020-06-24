@@ -68,5 +68,5 @@ callback = function(θ, l)
   return false
 end
 
-@time res1 = DiffEqFlux.sciml_train(loss_univ, θ, ADAM(0.03), cb = callback, maxiters=1000)
-#@time res1 = DiffEqFlux.sciml_train(loss_univ, θ,  LBFGS(), cb = callback)
+#@time res1 = DiffEqFlux.sciml_train(loss_univ, θ, ADAM(0.03), cb = callback, maxiters=1000)
+@time res1 = DiffEqFlux.sciml_train(loss_univ, θ,  LBFGS(), cb = callback)
